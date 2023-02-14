@@ -1,0 +1,52 @@
+/* C
+Parašykite programa, kuri paklaustų Jūsų vardo, pavardės, gimimo metų. Po to
+išvestų Jūsų amžių, suskaičiuotų raides ir pasakytų kiek vietos užima Jūsų
+duomenys.
+
+------------------------------------------------------------------------------------------------------
+*/
+#include <stdio.h>
+#include<conio.h>
+#include<string.h>
+
+int main(){
+
+int size,size2,size3,sums,suml, letters,
+ letters2, letters3;
+char name[20];
+char surname[20];
+char age[20];
+
+printf("Labas! Koks Jūsų vardas? \n");
+scanf( "%s", name);
+printf("pavarde \n");
+scanf( "%s", surname);
+printf("Metu jums? \n");
+scanf( "%s", age);
+
+size = sizeof( name);
+
+size2 = sizeof( surname);
+
+size3 = sizeof(age);
+sums=size+size2+size3;
+
+letters = strlen(name);
+letters2 = strlen(surname);
+letters3 = strlen(age);
+suml=letters+letters2+letters3;
+
+printf("Nuostabu, %s", name);
+printf("Be to, Jūsų vardas sudarytas iš %d raidžių, \n", letters);
+printf("ir jis kompiuterio atmintyje užima %d baitų.\n", size);
+printf("pavarde %s sudaryta iš %d raidžių, \n", surname, letters2);
+printf("ir ji kompiuterio atmintyje užima %d baitų.\n", size2);
+
+printf("Metai sudaryti iš %d skaiciu, \n", letters3);
+
+printf("ir kompiuterio atmintyje užima %d baitų.\n", size3);
+printf(" is viso atmintyje užima %d baitų.\n", sums);
+printf("Is viso yra %d simboliu, \n", suml);
+getch( );
+return 0;
+}
