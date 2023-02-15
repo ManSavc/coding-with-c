@@ -1,0 +1,21 @@
+/*Write a program to print the numbers 1 to 16 in decimal,
+in octal, hexadecimal systems*/
+
+#include<string.h>
+
+
+
+int main(){
+
+int x=0;
+
+while (x<=16)
+{
+
+
+printf("%d  %2o %2x \n" ,x,x,x );
+x++;
+}
+getch( );
+return 0;
+}
