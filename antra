@@ -1,0 +1,41 @@
+
+/**/rašykite programą, kuri atspausdintų skaičiaus x nuo 1 iki 10 vertę, jo kvadratą,
+kubą ir 1/x:
+x x
+2
+x
+3 1/x
+1 1 1 1
+2 4 8 0,50
+3 9 27 0,33
+.. .. .. ..
+10 100 1000 0,10
+-------------------------------------------------------------------
+*/
+#include<string.h>
+
+
+
+int main(){
+
+
+
+float x=1.00;
+float x2, x3, x_is_1;
+printf("x  x2  x3  1/x \n");
+while (x<=10)
+{x2 = x*x;
+x3 = x*x*x;
+x_is_1 = 1/x;
+
+
+printf("%.0f %2.0f %5.0f %6.2f \n" ,x,  x2,  x3,  1/x );
+/*%.0f  is for float output dimensions of the comma will be none
+%6.2f means 6 places before comma and 2 after */
+x++;
+}
+getch( ); /* program to hold the output screen for some time 
+until the user passes a key from the keyboard to exit 
+the console screen */
+return 0;
+}
