@@ -1,0 +1,25 @@
+/*ASCII kodų lentelė. Tai standartinė kompiuteryje naudojamų simbolių lentelė.
+Operatorius printf("%4d %c", 97, 97) atspausdina ekrane tokius simbolius: 97 a. Mat,
+pirmasis 97 skaičius spausdinamas, kaip sveikasis, o antrasis - kaip simbolis, pažymėtas
+numeriu 97. Atspausdinkite visus 256 simbolius
+
+
+---------------------------------------------------------------*/
+
+#include<string.h>
+
+
+int main(){
+
+
+
+int x=0;
+
+while (x<=127)
+{
+printf("%4d,  %2c \n" ,x,  x);
+x++;
+}
+getch( );
+return 0;
+}
