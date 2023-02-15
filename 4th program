@@ -2,17 +2,12 @@
 in octal, hexadecimal systems*/
 
 #include<string.h>
-
-
-
 int main(){
 
 int x=1;
 
 while (x<=16)
 {
-
-
 printf("%d  %2o %2x \n" ,x,x,x );
 x++;
 }
