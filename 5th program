@@ -1,0 +1,28 @@
+/*
+program is waiting for corect symbol
+---------------------------------------------
+*/
+#include <stdio.h>
+
+int main () {
+   char c;
+ int lin=0;
+ while(c!='a')
+{
+   printf(" Guess and enter the character: ");
+   c = getch( );//getch is without enter!!!
+
+   printf("Character entered: ");
+   putchar(c);
+   printf(" Value is  %d \n", c);
+
+lin++;}
+
+printf("count %d lines \n", lin);
+
+if(c ='a' )
+    printf("\n \n \t \t \t *****  You guess the character  *****");
+    getch();
+   return(0);
+}
+
