@@ -1,5 +1,6 @@
 /*
 program is waiting for corect symbol
+from user, symbol 'a', wrote in while
 ---------------------------------------------
 */
 #include <stdio.h>
