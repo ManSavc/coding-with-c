@@ -1,0 +1,89 @@
+/* program which pleased to enter pin */
+
+#include <stdio.h>
+
+
+int  pine; //pin Entered
+
+int main () {
+
+    // SETUP THIS
+  int pinc=1234;  //enter the corect  pin (pinCorect) [MAX 4 digits]
+  int a = 3; //times for enter pin(opurtunities) "for repeat entry"
+  //------------------------
+
+ int pin=1;//this is for one  time to entry
+ int b=0; //how many digits in pin (program evaluate)
+
+ int i, j ,e, digit=0, digit2;
+
+ printf(" amount of tries %d ", a);
+ printf(" \n number of pin %d \n\n", pinc);
+
+ for(i=0; i < 14; i++);
+{
+    printf(" _\n ");//for dashes to input
+}
+
+
+ while((pin<=a))
+{
+
+
+  if (pinc>=0 & pinc<10)
+    b=1;
+    if (pinc>9 & pinc<100)
+    b=2;
+    if (pinc>99 & pinc<1000)
+    b=3;
+  if (pinc>999 & pinc<10000)
+    b=4;
+    if (pinc>9999 & pinc<100000)
+    b=5;
+
+    printf("Enter pin by %d digits, enter valid numbers,else system will crash! \n", b);
+
+    if(a-pin != 0)
+       printf("have  %d times for repeat \n \r ", a-pin  );
+   else
+         printf(" \n\n\t\t !! Last entry !! " );
+
+
+
+printf("\n  b is %d \n ", b );
+printf("enter pin \n ");
+
+for(i=0; i < b; i++)
+{
+    printf(" _ ");//for dashes to input
+}
+    scanf("%d", &pine);
+    printf(" entered %d \n ", pine);
+if (pine>=0 & pine<10)
+    e=1;
+    if (pine>9 & pine<100)
+    e=2;
+    if (pine>99 & pine<1000)
+    e=3;
+  if (pine>999 & pine<10000)
+    e=4;
+    if (pine>9999 & pine<100000)
+    e=5;
+
+if (pinc == pine)
+    {printf(" !!!!!   corect pin !!!!!!!\n ");
+     getch();//wait any symbol from user
+     exit(0); //exit from progam
+    }
+
+     printf("entered pin  %d\n ", pine);
+
+  if(pine > pinc)
+        printf("entered too many symbols !!!  \n ");
+
+ pin++;}
+
+printf("too much entries\n");
+getch();
+   return(0);
+}
