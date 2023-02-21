@@ -2,7 +2,6 @@
 
 #include <stdio.h>
 
-
 int  pine; //pin Entered
 
 int main () {
@@ -25,25 +24,22 @@ int main () {
     printf(" _\n ");//for dashes to input
 }
 
-
  while((pin<=a))
 {
-
-
   if (pinc>=0 & pinc<10)
     b=1;
-    if (pinc>9 & pinc<100)
+  if (pinc>9 & pinc<100)
     b=2;
-    if (pinc>99 & pinc<1000)
+  if (pinc>99 & pinc<1000)
     b=3;
   if (pinc>999 & pinc<10000)
     b=4;
-    if (pinc>9999 & pinc<100000)
+  if (pinc>9999 & pinc<100000)
     b=5;
 
     printf("Enter pin by %d digits, enter valid numbers,else system will crash! \n", b);
 
-    if(a-pin != 0)
+   if(a-pin != 0)
        printf("have  %d times for repeat \n \r ", a-pin  );
    else
          printf(" \n\n\t\t !! Last entry !! " );
@@ -61,13 +57,13 @@ for(i=0; i < b; i++)
     printf(" entered %d \n ", pine);
 if (pine>=0 & pine<10)
     e=1;
-    if (pine>9 & pine<100)
+if (pine>9 & pine<100)
     e=2;
-    if (pine>99 & pine<1000)
+if (pine>99 & pine<1000)
     e=3;
-  if (pine>999 & pine<10000)
+if (pine>999 & pine<10000)
     e=4;
-    if (pine>9999 & pine<100000)
+if (pine>9999 & pine<100000)
     e=5;
 
 if (pinc == pine)
