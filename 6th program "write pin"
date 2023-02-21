@@ -78,7 +78,7 @@ if (pinc == pine)
 
      printf("entered pin  %d\n ", pine);
 
-  if(pine > pinc)
+  if(b > e)
         printf("entered too many symbols !!!  \n ");
 
  pin++;}
