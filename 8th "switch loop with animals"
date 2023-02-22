@@ -1,0 +1,26 @@
+//program shows the some animals by the firs leter
+void main( )
+{
+char ch;
+printf("action Enter any letter and I will generate the name of the animal from the letter you specified\n");
+printf("Enter the x symbol to cancel the job.\n");
+while((ch = getch())!='x')
+{
+if( ch!=' ') /*not space symbol*/
+switch(ch)
+{
+case 'z': printf("zebra, wild animal\n");
+break;
+case 'b': printf(" bunny, wild animal\n");
+break;
+case 'm': printf(" monkey, wild animal\n");
+break;
+case 'h': printf(" horse, domestic animal\n");
+break;
+default: printf("I don't know such an animal.\n");
+break;
+}
+else
+printf("You have entered the space bar. Enter a letter or # to cancel a job");
+}
+}
