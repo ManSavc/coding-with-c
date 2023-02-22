@@ -1,0 +1,64 @@
+//program do some action with switch loop
+#include <stdio.h>
+int main() {
+char ch;
+int num1, num2;
+
+printf("\nBasic operation of digits:");
+printf("\nAdd [> a <]");
+printf("\nSubtract [> s]");
+printf("\nMultiply [m]");
+printf("\nDivide [d]");
+
+printf("\nEnter character for operation:");
+scanf("%c", &ch);
+
+
+switch (ch) {
+    case 'a':
+         printf("\n             ***ADDITION***");
+         printf("\nEnter num1=");
+         scanf("%d", &num1);
+         printf("\nEnter num2=");
+         scanf("%d", &num2);
+         printf("\nAddition of num1 and num2=    %d", (num1+num2));
+         break;
+
+    case 's':
+
+         printf("\n             ***SUBSTRACTION***");
+         printf("\nEnter num1=");
+         scanf("%d", &num1);
+         printf("\nEnter num2=");
+         scanf("%d", &num2);
+         printf("\nSubtraction of num1 and num2=     %d", (num1-num2));
+         break;
+
+    case 'm':
+
+        printf("\n             ***MULTIPLICATION***");
+        printf("\nEnter num1=");
+        scanf("%d", &num1);
+        printf("\nEnter num2=");
+        scanf("%d", &num2);
+        printf("\nMultiplication of num1 and num2=  %d", (num1*num2));
+        break;
+
+    case 'd':
+
+        printf("\n             ***DIVISION***");
+        printf("\nEnter num1=");
+        scanf("%d", &num1);
+        printf("\nEnter num2=");
+        scanf("%d", &num2);
+        printf("\nDivision of num1 and num2=    %d", (num1/num2));
+        break;
+
+    default:
+        printf("\nInvalid value enetered");
+        break;
+}
+printf("\n press any key for EXIT...");
+ getch();
+return 0;
+}
