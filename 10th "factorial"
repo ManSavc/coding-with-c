@@ -1,0 +1,56 @@
+
+
+/*program counts factorial  entered digit from user
+factorial, in mathematics, the product of all positive
+integers less than or equal to a given positive integer
+and denoted by that integer and an exclamation point.
+Thus, factorial seven is written 7!,
+ meaning 1 × 2 × 3 × 4 × 5 × 6 × 7.
+ Factorial zero is defined as equal to 1
+//-----------------------------------------------------------------------------------------+
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int ch, sum;
+    printf("enter digit \n");
+    printf("for cancel press symbol ->01 <-\n");
+    scanf("%d", &ch);
+
+    if (ch == 01)
+    {
+
+        exit(0); // exit from program
+    }
+
+    if (ch < 0)
+
+        printf("\t entered negative digit, positive will be %d ", ch * (-1));
+
+    if (ch > 32768)
+    {
+        printf("to huge number");
+        exit(0);
+    }
+    printf("entered digit is %d", ch);
+    sum = ch;
+    if (ch == 0)
+    {
+        printf("\n factorial will be 1");
+    }
+
+    for (ch = ch; ch >= 2; ch--)
+    {
+        sum = sum * (ch - 1);
+    }
+
+    if (sum > 0)
+        printf("\t factorial %d", sum);
+
+    printf("\n finishing, press any key");
+    getch();
+
+    return 0;
+}
