@@ -1,0 +1,57 @@
+/*Program that adds the elements of two arrays (arrays consist of
+10 elements and the composition must be: the beginning of the first array is added to the second array
+end) and the result would be written to the third array, and the array elements divided
+placed in the fourth array. The initial arrays and their sums must be displayed on the screen,
+and division arrays.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[]= {10,12,14,16,18,20};
+    int b[]= {2,3,7,4,6,5},c[6],d[6],i;
+    for(i=0; i<=5; i++) //filling array
+    {
+        c[i]=a[i]/b[i];
+        d[i]=a[i]+b[i];
+    }
+    for(i=0; i<=5; i++)
+    {
+        printf("\n a[");
+        printf("%d",i);
+        printf("] firsr array %d", a[i]);
+    }
+    for(i=0; i<=5; i++)
+    {
+        printf("\n b[");
+        printf("%d",i);
+        printf("] second aray %d", b[i]);
+    }
+    for(i=0; i<=5; i++)
+    {
+        printf("\n c[");
+        printf("%d",i);
+        printf("] divide array will be  %d", c[i]);
+    }
+    for(i=0; i<=5; i++)
+
+    {
+        printf("\n d[");
+        printf("%d",i);
+        printf("] added aray %d", d[i]);
+
+    }
+    printf("\n ----------------or-----------------");
+    printf("\n a[i]   b[i]    c[i]     d[i]");
+    for(i=0; i<=5; i++)
+    {
+        printf("\n %d     %d      / %d      + %d",a[i],b[i],c[i],d[i]);
+    }
+
+
+    printf("\n finishing, press any key");
+    getch();
+    return 0;
+}
