@@ -1,0 +1,63 @@
+
+/*Program which calculate selected opurtinities
+
+//Parašykite programą, kuri pateiktu meniu. Meniu būtų galima pasirinkti: ar išvesti
+//nurodyto skaičiaus kubą, ar kvadratinę šaknį, ar faktorialą
+//-----------------
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h> //for sleep
+
+int main()
+{
+    printf("\n Select basic operation:");
+    printf("\nthird power press -> a <-");
+    printf("\nsquare root of number press -> s <]");
+    printf("\nfactorial -> f <-]");
+
+    int ch, op, num1, sum;
+    printf("if want to cancel press  0 .\n");
+    scanf("%c", &op);
+
+    printf("operation %c", op);
+
+    printf("\nEnter digit for operation, if entry 0, program will end");
+    scanf("%d", &num1);
+    printf("digit is %d", num1);
+
+    if (num1 == 0)
+    {
+        printf("\nfactorial -> 1 <-] \n program will ends in few seconds");
+        sleep(3); // sleep for 3 seconds
+        exit(0);
+    }
+
+    switch (op)
+    {
+    case 'a':
+
+        printf("\nthird power =%d", (num1 * num1 * num1));
+        break; // break the loop
+
+    case 's':
+        printf("\n square root of number %.0f", (sqrt(num1)));
+        break;
+
+    case 'f':
+
+        sum = num1;
+        for (ch = num1; ch >= 2; ch--)
+        {
+            sum = sum * (ch - 1);
+        }
+        printf("\n factorial %d", sum);
+
+        break;
+    }
+
+    printf("\n finishing, press any key");
+    getch();
+
+    return 0;
+}
