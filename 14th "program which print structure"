@@ -1,0 +1,50 @@
+//program which print structure
+#include <stdio.h>
+
+
+struct sodas
+{
+    char  pavad[50];
+    char  autor[50];
+    int   id, metai;
+};
+void printsodas( struct sodas medis );
+
+int main()
+
+{
+    struct sodas medis1;        /* Declare Book1 of type Book */
+    struct sodas medis2;        /* Declare Book2 of type Book */
+
+    /* book 1 specification */
+    strcpy( medis1.pavad, "stelmuze");
+    strcpy( medis1.autor, "petras petraitisi");
+    medis1.metai=1003;
+    medis1.id = 6495407;
+
+    /* book 2 specification */
+    strcpy( medis2.pavad,"baublys prie orvidu sodybos");
+    strcpy( medis2.autor, "vilius orvidas");
+    medis2.metai=1954;
+    medis2.id = 6495700;
+
+    printf("wood \t\t\t  \t   autor   \t\t year  id\n\r");
+    /* print Book1 info */
+    printsodas( medis1 );
+
+    /* Print Book2 info */
+    printsodas( medis2 );
+
+    printf("\n finishing, press any key");
+
+    getch();
+    return 0;
+}
+
+void printsodas( struct sodas medis )
+{
+
+    printf( "%-33s  %-21s %-4d  %d\n\r", medis.pavad, medis.autor, medis.metai, medis.id);
+    // printf( "", );
+
+}
