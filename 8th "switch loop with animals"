@@ -21,6 +21,6 @@ default: printf("I don't know such an animal.\n");
 break;
 }
 else
-printf("You have entered the space bar. Enter a letter or # to cancel a job");
+printf("You have entered the space bar. Enter a letter or x to cancel a job");
 }
 }
