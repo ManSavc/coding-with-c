@@ -1,0 +1,58 @@
+//program which ask and print data in structure
+#include <stdio.h>
+#include <string.h>
+char  name[50];
+char  author[50];
+int i, q, id, year;
+
+struct houses
+{
+    char  name[50];
+    char  author[50];
+    int   id, year;
+};
+void city_of_houses( struct houses house );
+
+int main()
+
+{
+    printf("How much records you will do? Enter quantity : \n");
+    scanf("%d", &q);
+    struct houses house[i];        /* Declare house[i] of type houses */
+
+    for(i=1; i<=q; i++)
+    {
+        /* house[i] specification */
+        printf("Enter the name of %d house; \n", i);
+        scanf("%s", &house[i].name);
+
+        printf("Enter the author of %d house; \n", i);
+        scanf("%s", &house[i].author);
+
+        printf("Enter the year of %d house; \n", i);
+        scanf("%d", &house[i].year);
+
+
+        printf("Enter the id of %d house; \n", i);
+        scanf("%d", &house[i].id);
+
+        if(i==q)//starts when we entered all houses
+        {
+            printf("name\t\t author\t\t year   id \n");
+            for(i=1; i<=q; i++)
+            {
+                /* print house[i] info */
+                city_of_houses( house[i] );
+            }
+        }
+    }
+    printf("\n finishing, press any key");
+    getch();
+    return 0;
+}
+
+void city_of_houses( struct houses house )
+{
+    printf( "%-15s  %-15s %-5d  %d\n\r",
+        house.name, house.author, house.year, house.id);
+}
