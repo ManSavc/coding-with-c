@@ -1,16 +1,15 @@
-/*program calculates the numbers of enterd word
-and show the adress of every symbols, don't forget
-that all strings ends with \0 sybol*/
+/*program calculates the numbers of entered word
+and show the adrres of every symbols, don't forget
+that all strings ends with \0 symbol*/
 
 #include <stdio.h>
+#include <string.h>
 
 int word();
 char name[99];
 int i;
 int main()
 {
-
-
     word();
     short a=0;
     printf(" i = %d \n", i);
@@ -19,7 +18,7 @@ int main()
     for(a=0; a<=i; a++)
     {
         printf(" %08p | %8c | %4d | name[%d]\n",
-               &name[a],name[a],sizeof(char),a);
+               &name[a],name[a],sizeof(a),a);
     }
     return 0;
 }
@@ -33,6 +32,7 @@ int word()
     i = strlen(name);
     return i;
 }
+
 
 
 
