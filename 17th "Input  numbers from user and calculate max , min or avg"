@@ -6,6 +6,7 @@
 int max,min, num[], qan, x, j=1, i, sum;
 char letter;
 float xf,av;
+int input_and_show_value();
 int maksi();
 int mini();
 int avi();
@@ -48,7 +49,7 @@ int main()
     return 0;
 }
 
-int maksi()
+int input_and_show_value()
 {
     printf("Enter how much numbers you calculate?:\n ");
     scanf("%d", &qan);
@@ -57,7 +58,7 @@ int maksi()
     //scan number 'i'
     for(i=1; i <= x; i++)
     {
-        printf("print number %d  ", i);
+        printf("print number %d (only integer) ", i);
         scanf("%d", &num[i]);
     }
     // print num 'i'
@@ -65,6 +66,13 @@ int maksi()
     {
         printf("number %d = %d\n",i, num[i]);
     }
+    return qan;
+}
+
+int maksi()
+{
+    input_and_show_value();
+
     //find max value
     printf("max before cycle  %d", max);
     j=1;
@@ -81,25 +89,9 @@ int maksi()
     return max;
 }
 
-
-
 int mini()
 {
-    printf("Enter how much numbers you calculate?:\n ");
-    scanf("%d", &qan);
-    x=qan;
-    printf("print number of qantity %d \n ", qan);
-    //scan value of number 'i'
-    for(i=1; i <= x; i++)
-    {
-        printf("print number %d  ", i);
-        scanf("%d", &num[i]);
-    }
-    //print numbers of 'i'
-    for(i=1; i <= x; i++)
-    {
-        printf("number %d = %d",i, num[i]);
-    }
+    input_and_show_value();
 
     //search minimum value
     printf("\n 'min' before cycle %d", min);
@@ -123,26 +115,9 @@ int mini()
 
 int avi()
 {
-    printf("Enter how much numbers you calculate?:\n ");
-    scanf("%d", &qan);
-    x=qan;
-    xf = qan; //for float, making one of the ints a float,
-    //you will get floating point division
-
-    printf("print number of qantity %d \n ", qan);
-    //scan value of number 'i'
-    for(i=1; i <= x; i++)
-    {
-        printf("print number %d  ", i);
-        scanf("%d", &num[i]);
-    }
-    //print numbers of 'i'
-    for(i=1; i <= x; i++)
-    {
-        printf("number %d = %d",i, num[i]);
-    }
+    input_and_show_value();
+    xf = x *1.00;
     //search average value
-    printf("\n 'av' before cycle %f", av);
     j=1;
     sum = 0;
     while(j<=x)
@@ -155,4 +130,3 @@ int avi()
     return av;
 
 }
-
