@@ -1,0 +1,37 @@
+#include <stdio.h>
+int num1, num2, fac1, fac2, i;
+int factorial();
+int main()
+{
+    printf("enter number 1\n");
+    scanf("%d", &num1);
+    printf("enter number 2\n");
+    scanf("%d", &num2);
+
+    if ((num1%2 ==0 ) & (num2%2==0) )
+        printf("both are equal");
+    else if (   ((num1%2) == 0) & ((num2%2) !=0)  )
+        printf("num1 are equal num2 not");
+    else if (   ((num2%2) == 0) & ((num1%2) !=0)  )
+        printf("num2 are equal num1 not");
+    else
+        printf("both are not equal \n");
+    factorial();
+    return(0);
+}
+
+int factorial()
+{
+    fac1=num1;
+    fac2=num2;
+    for (i=(num1-1); i>=1; i--)
+    {
+        fac1=fac1*i;
+    }
+    for (i=(num2-1); i>=1; i--)
+    {
+        fac2=fac2*i;
+    }
+    printf("factorial 1 %d, factorial 2 %d, ", fac1, fac2);
+    return (0);
+}
