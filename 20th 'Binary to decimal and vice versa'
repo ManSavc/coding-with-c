@@ -1,0 +1,96 @@
+#include <stdio.h>
+#include <math.h> //for power function
+char ch;
+int num_w; //num for while loop
+int num_f; //for 'for' loop
+int decimal_this; //for inspection
+int  num_o, i, j, z, decimal;  //num_o is original number
+int b[10]; //for binary witch will be created
+void to_decimal();
+void to_binary();
+int main()
+{
+    printf("enter the operation , from binary to decimal,press D, from decimal to binary press B\n");
+    printf("To cancel press X \n");
+    scanf("%c", &ch);
+    printf("entered operation is %c \n", ch);
+    if (ch == 'D')
+        to_decimal();
+    else if (ch == 'B')
+        to_binary();
+    else if (ch == 'X')
+        exit(0);
+    else
+        printf ("--WRONG operation!--\n");
+
+    return(0);
+}
+void to_binary()
+{
+    printf("enter number in decimal (RANGE 0-1024)\n");
+    scanf("%d", &num_o);//num_o --> num original
+    num_f = num_o;
+    for(i=0; i<10; i++) //cycle to know what is the numbers square in bits...
+    {
+        z = pow(2, i);// it shows the value witch will be powered 2 by i
+        if(z >num_o)
+            break;
+
+    }
+    printf ("z --> %d, i will be %d\n",z, i);
+
+    if( num_o > 0)
+        i=i-1;  //it need , because value of i is increased by 1, before 'break'.
+    z=0;
+    for(j=i; j >=0 ; j-- )
+        printf(" b[%d] ",  j);//to print array numbers
+    printf(" \n ");//new line after array numbers
+
+    for(j=i; j >=0 ; j--)
+    {
+        if(num_f >=0)
+        {
+            int b_square=(pow(2, j));
+            z=num_f/b_square;//saw what is the number not 0
+            if((num_f%2==0) & (pow(2, j) == num_f ) )
+                z=1;
+
+            int A;
+            A  = (pow(2, j) * z);
+            b[j] = z;
+            printf("%d     ",  b[j]);
+            num_f = num_f - b_square*z;
+        }
+    }
+}
+
+void to_decimal()
+{
+
+    i=1;
+    printf("enter number in 0 and 1\n");
+    scanf("%d", &num_o);
+    num_w = num_f = num_o;
+    //how many integers we have
+    printf("num_w = %d \t i = %d, \t \n", num_w, i  );//for fist line
+    while (num_w > 1)
+    {
+        num_w = num_w / 10;
+        i++;
+        printf("num_w = %d \t i = %d, \t \n", num_w, i  );
+
+    }
+    //which number we have to multiple
+    decimal = 0;
+
+    for(j=0; j<i; j++ )
+    {
+        z=num_f%2;//saw what is the number not 0
+        decimal = decimal + (pow(2, j) * z);
+        decimal_this =  (pow(2, j) * z);
+        num_f = num_f/10;
+        printf("\t cycle for , j = %d, z = %d,decimal this will be %d \n decimal all will be %d ",j,  z, decimal_this,decimal);
+
+        printf(" \n\n");
+    }
+}
